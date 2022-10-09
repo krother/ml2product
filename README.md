@@ -1,88 +1,98 @@
 
-# ML2 Product
+# ML 2 Product
 
-Course in productionizing a ML use case
+**von Kristian Rother**
 
-## Pre-course questions
+## Ziel
 
-* have you trained a ML model before?
-* have you used git before?
-* have you written automated tests before?
-* have you used Docker?
-* is Docker installed on your computer?
-
-## Contents
-
-### Kick-Off
-
-* expectations
-* course overview
-
-### Session 1: The Prototype
-
-* train a simple ML model in a Jupyter notebook
-* report a quality metric for the model
-* recap questions: which model/metric/test strategy
-
-### Session 2: Git
-
-* Create a git repo and upload your code
-* checklist for new repositories
-
-### Session 3: Clean up
-
-* export from Jupyter to a Python script
-* remove unnecessary code
-* structure code into functions
-* run a linter
-* git push
-
-### Session 4: MLFlow
-
-* create a MLFlow instance
-* train a newer model with extra data
-* compare the scores
-* start a API via MLFlow
-
-### Session 5: Test
-
-* write a Unit Test against the API
-* plug the test into GitHub action
-* git push
-
-### Session 6: Packaging
-
-* write a file listing all dependencies
-* use poetry to install/build/release the package
-* git push
-
-### Session 7: Monitor
-
-* set up a cronjob that trains the model repeatedly
-* log train scores over time
-* plot the training scores
-* discuss model drift
-
-### Session 8: Data quality checks
-
-* calculate metrics from key features from the training data
-* use window functions to
-* detect outliers
-* add 3-4 plots to a dashboard
-
-### Session 9: Dockerize
-
-* write a Dockerfile
-* run the docker container locally
-* add a second docker container with a dashboard
-
-### Session 10: Summary and Recap
-
-* review
+In diesem Kurs wirst Du einen **ML Prototyp** von einem Jupyter Notebook in ein Softwareprodukt entwickeln.
 
 ----
 
-## Contact
+## Voraussetzungen
+
+Du benötigst auf Deinem Computer:
+
+* Python 3.7 oder höher
+* den [Insurance Claims Datensatz](https://data.mendeley.com/datasets/vfchtm5y7j/1) als CSV
+* ein Jupyter Notebook, das ein einfaches Modell trainiert (es darf wirklich miserabel sein)
+* Docker
+
+Do solltest folgendes können:
+
+* Deutsch B2
+* einfache Programme mit Python / pandas / matplotlib schreiben
+* einfache Modelle mit scikit-learn trainieren
+* die Kommandozeile verwenden (bash oder zsh)
+* git verwenden (pull-add-commit-push)
+
+Bitte sage gleich Bescheid falls etwas davon völlig neu ist. Ich frage aber nach.
+
+----
+
+## Tagesablauf
+
+| Zeit | Aktivität |
+|------|-----------|
+| 9:00 - 9:15 | Standup |
+| 9:15 - 10:30 | Session 1 |
+| 10:30 - 10:45 | Pause |
+| 10:45 - 13:0 | Session 2 |
+| 13:00 - 14:00 | Pause |
+| 14:00 - 14:15 | Standup |
+| 14:15 - 16:00 | Session 3 |
+| 16:00 - 16:15 | Pause |
+| 16:15 - 17:00 | Session 4 |
+| 17:00 - 18:00 | Code Review |
+
+----
+## Start
+
+Ziehe ein Objekt aus dem Beutel und beantworte die Frage in der Tabelle:
+
+| Objekt | Frage |
+|--------|----------|
+| Herz     | Was gefällt Dir in der AI Guild Academy gut? |
+| Piksball | Was ist eine große Herausforderung für Dich? |
+| Ente     | Was kannst Du schon gut? |
+| Auto     | Was möchtest Du eines Tages erreichen? |
+| Gehirn   | Worüber denkst Du nach? |
+
+----
+
+## Kursthemen
+
+### Teil 1: Start
+
+* [Teamwork](teamwork.md)
+* [Der Prototyp](prototyp.md)
+* [Export aus Jupyter](jupyter_export.md)
+* [Git](git_repo.md)
+
+### Teil 2: Infrastruktur
+
+* [Architektur](architektur.md)
+* [Datenquelle](datenquelle.md)
+* [FastAPI](fastapi.md)
+* [TODO Docker](docker.md)
+* [Datenbank](datenbank.md)
+
+### Teil 3: Software Engineering
+
+* [Refactoring](refactoring.md)
+* [Paketierung](paketierung.md)
+* [Automatische Tests](test.md)
+* [TODO Continuous Integration](ci.md)
+
+### Teil 4: Qualitätssicherung
+
+* [MLFlow](mlflow.md)
+* [Datenqualität](datenqualitaet.md)
+* [Monitoring](monitoring.md)
+
+----
+
+## Kontakt
 
 `kristian.rother@posteo.de`
 
