@@ -1,0 +1,7 @@
+version: '3'
+services:
+
+  data_source:
+    build: data_source
+    ports:
+      - 8000:8000
