@@ -1,0 +1,5 @@
+# all libraries required by the project and their versions
+requests==2.27.1
+scikit-learn==0.24.1
+fastapi
+pydantic
