@@ -37,7 +37,7 @@ Bitte sage gleich Bescheid falls etwas davon völlig neu ist. Ich frage aber nac
 | 9:00 - 9:15 | Standup |
 | 9:15 - 10:30 | Session 1 |
 | 10:30 - 10:45 | Pause |
-| 10:45 - 13:0 | Session 2 |
+| 10:45 - 13:00 | Session 2 |
 | 13:00 - 14:00 | Pause |
 | 14:00 - 14:15 | Standup |
 | 14:15 - 16:00 | Session 3 |
@@ -62,31 +62,32 @@ Ziehe ein Objekt aus dem Beutel und beantworte die Frage in der Tabelle:
 
 ## Kursthemen
 
-### Teil 1: Start
+### Tag 1: Start
 
 * [Teamwork](teamwork.md)
 * [Der Prototyp](prototyp.md)
 * [Export aus Jupyter](jupyter_export.md)
 * [Git](git_repo.md)
-
-### Teil 2: Infrastruktur
-
-* [Architektur](architektur.md)
 * [Datenquelle](datenquelle.md)
-* [FastAPI](fastapi.md)
-* [TODO Docker](docker.md)
-* [Datenbank](datenbank.md)
+* [Architektur](architektur.md)
 
-### Teil 3: Software Engineering
+### Tag 2: Inference
 
+* [Virtuelle Umgebungen](https://www.academis.eu/posts/software_engineering/virtualenv.md)
 * [Refactoring](refactoring.md)
+* [FastAPI](fastapi.md)
+* [MLFlow](mlflow.md)
+
+### Tag 3: Software Engineering
+
 * [Paketierung](paketierung.md)
 * [Automatische Tests](test.md)
 * [TODO Continuous Integration](ci.md)
+* [TODO Docker](docker.md)
 
-### Teil 4: Qualitätssicherung
+### Tag 4: Qualitätssicherung
 
-* [MLFlow](mlflow.md)
+* [Datenbank](datenbank.md)
 * [Datenqualität](datenqualitaet.md)
 * [Monitoring](monitoring.md)
 

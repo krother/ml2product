@@ -13,7 +13,7 @@ Hier verwenden wir eine REST-API.
 
 ## Schritt 1
 
-Klone das Repository [github.com/krother/ml2product](github.com/krother/ml2product).
+Klone das Repository [github.com/krother/ml2product](https://github.com/krother/ml2product).
 Du benötigst den gesamten Ordner `data_source/` .
 Kopiere diesen Ordner in Dein Repository.
 
