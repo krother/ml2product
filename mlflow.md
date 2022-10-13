@@ -7,41 +7,61 @@ Verwende MLFlow, um Deine Modelle zu verwalten.
 
 ## Schritt 1
 
-* installiere [MLFlow](https://mlflow.org/)
-* konfiguriere die von MLFlow verwendete Datenbank
+Installiere [MLFlow](https://mlflow.org/)
+
+    pip install mlflow
 
 ## Schritt 2 
 
-* starte einen MLFlow Server
-* es genügt die Kommandozeilen-Version
+Starte die MLFlow UI mit
+
+    mlflow ui
+
+Gehe im Browser auf [http://localhost:5000](http://localhost:5000).
 
 ## Schritt 3
 
-* speichere Dein Modell in MLFlow
-* speichere die Präprozessoren ebenfalls
-* speichere einige Evaluationsmetriken
-* speichere Information, welche Daten zum Trainieren verwendet wurden
-* stelle sicher, dass ein Zeitstempel gespeichert wird
+Verändere Dein Skript zum Trainieren des Modells, so dass es MLFlow verwendet:
+
+    import mlflow
+
+Der Code zum Trainieren muß innerhalb eines **Context Managers** ausgeführt werden.
+Füge den `with`-Block hinzu. Logge Hyperparameter, Metriken und das Modell:
+
+    with mlflow.start_run():
+        Xtrain, ytrain = my_preprocessing_function()
+    
+        trees = 77
+        mlflow.log_param("n_estimators", trees)  # log a hyperparameters
+        model = RandomForestClassifier(n_estimators=trees)  # or similar
+        model.fit()
+
+        acc = model.score(Xtrain, ytrain)
+        model.log_metric("train_acc", acc)
+
+        mlflow.sklearn.log_model(model, "model")
+
+Das Modell kann ein `Pipeline`-Objekt sein, wenn Du auch die Präprozessoren speichern möchtest.
 
 ## Schritt 4
 
-* trainiere ein neues Modell mit den aktuellen Daten
-* speichere es ebenfalls
+Führe das Modell Trainieren aus:
+
+    python my_model.py
+
+Es sollte ein Ordner `mlruns/` entstanden sein. 
 
 ## Schritt 5
 
-* starte das MLFlow Dashboard
-* vergleiche die Evaluationsmetriken der Modelle
+Gehe auf das Dashboard und refreshe es.
+
+Du solltest Dein Modell dort sehen.
+Klicke auf den Eintrag, um zu sehen, was MLFlow gespeichert hat.
 
 ## Schritt 6
 
-* lade ein Modell aus MLFlow und verwende es für eine Vorhersage
+Starte eines der Modelle als API mit:
 
-## Schritt 7
+    mlflow models serve -p 1234 -m mlruns/0/69b0d6cfc5644c9c93ac2df377a3e5b9/artifacts/model/
 
-* sichere alle Änderungen auf git
-
-## Schritt 8
-
-* starte eine API mit MLFlow
-* diskutiert, ob es sinnvoll ist, FastAPI durch die MLFlow API zu ersetzen
+Setze den Hash ein, den Du in der Übersicht des Modells siehst.

@@ -82,11 +82,11 @@ Ziehe ein Objekt aus dem Beutel und beantworte die Frage in der Tabelle:
 * [Automatische Tests](test.md)
 * [Paketierung](paketierung.md)
 * [MLFlow](mlflow.md)
-* [TODO Continuous Integration](ci.md)
-* [TODO Docker](docker.md)
+* [Docker](docker.md)
 
 ### Tag 4: Qualitätssicherung
 
+* [TODO Continuous Integration](ci.md)
 * [Datenbank](datenbank.md)
 * [Datenqualität](datenqualitaet.md)
 * [Monitoring](monitoring.md)
