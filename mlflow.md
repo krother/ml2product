@@ -57,11 +57,3 @@ Gehe auf das Dashboard und refreshe es.
 
 Du solltest Dein Modell dort sehen.
 Klicke auf den Eintrag, um zu sehen, was MLFlow gespeichert hat.
-
-## Schritt 6
-
-Starte eines der Modelle als API mit:
-
-    mlflow models serve -p 1234 -m mlruns/0/69b0d6cfc5644c9c93ac2df377a3e5b9/artifacts/model/
-
-Setze den Hash ein, den Du in der Übersicht des Modells siehst.
