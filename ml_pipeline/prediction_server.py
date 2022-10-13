@@ -1,12 +1,19 @@
 """
-run it with:
+The REST API server for inference
+needs to run on a different port as the data source.
 
-    uvicorn prediction_server:app --reload
+Start the server with:
+
+    uvicorn prediction_server:app --reload --port 8001
+
 """
+import pickle
+
 from fastapi import FastAPI
 import numpy as np
-import model_dummy
+import pandas as pd
 from pydantic import BaseModel
+from fastapi.encoders import jsonable_encoder
 
 
 # intialize web server
@@ -20,17 +27,29 @@ def roll_dice():
     return {"dice_result": number}
 
 
-
 class Item(BaseModel):
-    gender: bool
+    gender: int
     age: int
-    income: float
+    year: int
+    age_of_car_M: int
+    Car_power_M: float
+    Car_2ndDriver_M: int
+    num_policiesC: int
+    metro_code: int
+    Policy_PaymentMethodA: int
+    Policy_PaymentMethodH: int
+    Insuredcapital_content_re: float
+    Insuredcapital_continent_re: float
+    appartment: int
+    Client_Seniority: float
+    Retention: int
 
 
 @app.post("/predict")
 def predict(item: Item):
-    """uses the ML model"""
-    df = [item]
-    result = model_dummy.get_prediction(df)
-    return {"probability": result}
-
+    """uses the ML model to make a prediction for a single data point"""
+    model = pickle.load(open('model.pkl', 'rb'))
+    Xpred = pd.DataFrame([jsonable_encoder(item)])
+    model.predict(Xpred)
+    ypred = model.predict(Xpred).tolist()[0]
+    return {"prediction result": ypred}

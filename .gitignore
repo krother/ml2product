@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 data_source/data_ex.csv
 data_source/data_reader.py
+ml_pipeline/model.pkl

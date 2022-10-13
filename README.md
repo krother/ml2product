@@ -76,12 +76,12 @@ Ziehe ein Objekt aus dem Beutel und beantworte die Frage in der Tabelle:
 * [Virtuelle Umgebungen](https://www.academis.eu/posts/software_engineering/virtualenv.md)
 * [Refactoring](refactoring.md)
 * [FastAPI](fastapi.md)
-* [MLFlow](mlflow.md)
 
 ### Tag 3: Software Engineering
 
-* [Paketierung](paketierung.md)
 * [Automatische Tests](test.md)
+* [Paketierung](paketierung.md)
+* [MLFlow](mlflow.md)
 * [TODO Continuous Integration](ci.md)
 * [TODO Docker](docker.md)
 
