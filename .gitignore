@@ -127,6 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-data_source/data_ex.csv
-data_source/data_reader.py
+
+ml_pipeline/data_source/data_ex.csv
 ml_pipeline/model.pkl
+ml_pipeline/mlruns
