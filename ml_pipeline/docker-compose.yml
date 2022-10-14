@@ -5,3 +5,9 @@ services:
     build: data_source
     ports:
       - 8000:8000
+
+  model_training:
+    build: model_training
+    ports:
+      - 8001:8000
+
