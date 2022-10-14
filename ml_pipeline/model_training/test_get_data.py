@@ -1,4 +1,3 @@
-
 import pandas as pd
 
 from get_data import load_and_sort_data

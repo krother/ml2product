@@ -27,7 +27,7 @@ def get_number_of_chunks():
 
 def get_clean_chunk(chunk):
     """
-    the json file comes with an extra pair of quotes 
+    the json file comes with an extra pair of quotes
     that needs to be replaced in order to read the chunk content
     """
     url = f"{BASE_URL}/chunk/{chunk}"

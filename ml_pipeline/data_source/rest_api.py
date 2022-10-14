@@ -16,8 +16,8 @@ import base64
 
 # import data from data_ex.csv
 # has to be in the same directory!
-data_reader = open('data_reader.bin', 'rb').read()
-eval(compile(base64.b64decode(data_reader),'<string>','exec'))
+data_reader = open("data_reader.bin", "rb").read()
+eval(compile(base64.b64decode(data_reader), "<string>", "exec"))
 
 # intialize web server
 app = FastAPI()
@@ -26,6 +26,7 @@ app = FastAPI()
 @app.get("/")
 def hello():
     return {"Hello": "World"}
+
 
 @app.get("/n_chunks")
 def get_chunk_number():

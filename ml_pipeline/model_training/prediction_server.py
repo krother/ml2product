@@ -20,7 +20,7 @@ from fastapi.encoders import jsonable_encoder
 app = FastAPI()
 
 
-@app.get("/dice")   # URL suffix, URL path or endpoint
+@app.get("/dice")  # URL suffix, URL path or endpoint
 def roll_dice():
     """Rolls a die"""
     number = np.random.randint(1, 7)
@@ -48,7 +48,7 @@ class Item(BaseModel):
 @app.post("/predict")
 def predict(item: Item):
     """uses the ML model to make a prediction for a single data point"""
-    model = pickle.load(open('model.pkl', 'rb'))
+    model = pickle.load(open("model.pkl", "rb"))
     Xpred = pd.DataFrame([jsonable_encoder(item)])
     model.predict(Xpred)
     ypred = model.predict(Xpred).tolist()[0]
