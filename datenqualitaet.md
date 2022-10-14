@@ -3,26 +3,18 @@
 
 ## Ziel
 
-Untersucht, ob sich Eure Daten über die Zeit verändern.
+Untersuche, ob sich die Daten über die Zeit verändern.
 
 ## Schritt 1
 
-* berechnet Mittelwert, Median und andere Statistiken für Variablen der Trainingsdaten.
-* verwendet die *chunk-id* als Zeitachse.
+* berechne Mittelwert, Median und andere Statistiken für Features der Trainingsdaten.
+* verwende die *chunk-id* als Zeitachse.
 * plotte die Ergebnisse.
 
 ## Schritt 2
 
-* suche nach fehlenden Daten.
-
-## Schritt 3
-
 * suche nach Ausreißern in den Daten
-
-## Schritt 4
-
-* füge 3-4 Plots zu einer Übersicht zusammnen.
-* verwende Jupyter oder Metabase (siehe [Monitoring](monitoring.md))
+* probiere den [swarmplot](https://seaborn.pydata.org/examples/scatterplot_categorical.html) oder die [Scatterplot Matrix](https://seaborn.pydata.org/examples/scatterplot_matrix.html) in Seaborn aus.
 
 ## Weitere Infos
 

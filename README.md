@@ -86,10 +86,10 @@ Ziehe ein Objekt aus dem Beutel und beantworte die Frage in der Tabelle:
 
 ### Tag 4: Qualitätssicherung
 
-* [TODO Continuous Integration](ci.md)
-* [Datenbank](datenbank.md)
 * [Datenqualität](datenqualitaet.md)
 * [Monitoring](monitoring.md)
+* [Continuous Integration](https://www.academis.eu/posts/software_engineering/continuous_integration.md)
+* [Aufräumen](aufraeumen.md)
 
 ----
 

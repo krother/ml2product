@@ -17,7 +17,7 @@ Starte die MLFlow UI mit
 
     mlflow ui
 
-Gehe im Browser auf [http://localhost:5000](http://localhost:5000).
+Gehe im Browser auf [http://127.0.0.1:5000](http://127.0.0.1:5000).
 
 ## Schritt 3
 
@@ -34,10 +34,10 @@ Füge den `with`-Block hinzu. Logge Hyperparameter, Metriken und das Modell:
         trees = 77
         mlflow.log_param("n_estimators", trees)  # log a hyperparameters
         model = RandomForestClassifier(n_estimators=trees)  # or similar
-        model.fit()
+        model.fit(Xtrain, ytrain)
 
         acc = model.score(Xtrain, ytrain)
-        model.log_metric("train_acc", acc)
+        mlflow.log_metric("train_acc", acc)
 
         mlflow.sklearn.log_model(model, "model")
 
